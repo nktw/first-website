@@ -16,11 +16,16 @@ div {
 div {
   -ms-overflow-style: none;
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style> 
 
@@ -41,8 +46,18 @@ div {
     <div class="w3-padding-35 w3-center">
       <h1>Biography</h1>
       <div class="w3-justify w3-padding-large">
-        <p>Born in late colonial-era Hong Kong, Natalie was raised by UK-educated parents who instilled in her with an unique set of Chinese-western cultural values.</p>
-        <img src="/media/22A_00583.jpg" class="center">
+        <p>Born in late colonial-era Hong Kong, Natalie was raised by UK-educated parents who instilled in her an unique set of Chinese-western cultural values.</p>
+        <div class="row">
+  <div class="column">
+    <img src="/media/22A_00583.jpg" alt="hk" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/media/_3A_00602.jpg" alt="hk" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/media/_15_00628.jpg" alt="hk" style="width:100%">
+  </div>
+</div>
         <p>She studied in catholic schools throughout her childhood and teenage years, and moved to England to pursue higher education in 2011.</p>
         <p>Natalie first enrolled in a bachelor's degree program in Media Practice at the University of Sussex in Brighton. After one semester of gaining experience making videos and other media, she decided to switch to a program in Human Geography, from which she believed she would gain a wider understanding of the world around her.</p>
         <p>During the first summer break from university, Natalie took the opportunity to volunteer for a dolphin research institute in Sardinia, Italy, as she rarely got the chance in Hong Kong to observe wildlife in their natural settings. The experience inspired her to go back to Hong Kong the following summer and to work for a local environmental NGO while conducting a study in preparation for her thesis.</p>
