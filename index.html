@@ -193,35 +193,6 @@ span.add-label{
   from {opacity: .4}
   to {opacity: 1}
 }
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
 </style> 
 
 <!-- First Grid: Logo & About -->
@@ -392,6 +363,35 @@ The AWC operates on an advertising-supported revenue model, which means that the
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 Ecuador-born curator and co-founder of the AWC María Inés Plaza Lazo explained the title in an event in New York recently, “we are referring to a pre-industrial idea of labor… at the same time, we mock the idea that in our time there is a specific ideological frame that we can understand class struggle, since in our current governments there are no clear orientations and privatizing interests are moving the political sphere.”<br><br>
 Each issue of the AWC contains a carefully-curated selection of photographs, artworks, poems, commentaries, and articles provided and written in different languages by artists and writers who also participate in the design of advertisements placed in the issue. The multilingualism of the newspaper, for the AWC editorial team, allows for difference in cultural perspectives. They want the newspaper to be accessible, collaborative, and “an offer for everyone”, as emphasized by Alina Kolar, one of three AWC publishers, at the website launch event in Berlin. <br><br> 
 Through these core elements, the AWC aims to redistribute power and wealth both within the art world and the society. Over the past 1.5 year, the newspaper has grown bigger in terms of content and outreach. For each new issue launched, the number of copies printed increases as they are being distributed by more street vendors and retail points. The schedule of Sochacki in 2020 is already packed with planned launch of issues in new cities. While the budget of publishing the AWC remains limited, it is for him and the rest of the AWC team a priority to find funding through advertising and a continuous struggle to maintain equilibrium that allows them to sustain their editorial office in a time of growth. 
